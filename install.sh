@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo apt update
 sudo mkdir /etc/ssl/nginx
 sudo cp nginx-repo.crt /etc/ssl/nginx/
