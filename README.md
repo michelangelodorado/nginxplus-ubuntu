@@ -1,5 +1,5 @@
 # nginxplus-ubuntu
-nginxplus installation scrip for ubuntu with repo cert and key
+nginxplus installation script for ubuntu with repo cert and key
 
 ```bash
 sudo apt install git -y
