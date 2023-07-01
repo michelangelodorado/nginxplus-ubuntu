@@ -2,7 +2,7 @@ sudo apt update
 sudo mkdir /etc/ssl/nginx
 sudo cp nginx-repo.crt /etc/ssl/nginx/
 sudo cp nginx-repo.key /etc/ssl/nginx/
-sudo apt-get install apt-transport-https lsb-release ca-certificates wget gnupg2 ubuntu-keyring
+sudo apt-get -y install apt-transport-https lsb-release ca-certificates wget gnupg2 ubuntu-keyring
 wait
 wget -qO - https://cs.nginx.com/static/keys/nginx_signing.key | gpg --dearmor | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
 wait
@@ -16,7 +16,10 @@ printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://pk
 sudo wget -P /etc/apt/apt.conf.d https://cs.nginx.com/static/files/90pkgs-nginx
 wait
 sudo apt-get update -y
-sudo apt-get install -y nginx-plus app-protect app-protect-attack-signatures
+wait
+sudo apt-get install -y nginx-plus
+wait
+sudo apt-get install -y app-protect app-protect-attack-signatures
 wait
 #sudo apt-get install nginx-plus nginx-plus-module-modsecurity
 #sudo apt-get install nginx-plus-quic 
