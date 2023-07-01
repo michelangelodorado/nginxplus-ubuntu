@@ -25,3 +25,4 @@ wait
 #sudo apt-get install nginx-plus nginx-plus-module-modsecurity
 #sudo apt-get install nginx-plus-quic 
 nginx -v
+curl http://localhost/
